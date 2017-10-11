@@ -3,8 +3,7 @@ import {
     OnInit,
     OnDestroy,
     ViewChild
-    // ElementRef
-  } from '@angular/core'; //, EventEmitter 
+  } from '@angular/core';
 import { Ingredient } from '../../shared/ingredient.model';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs/Subscription';
@@ -17,8 +16,6 @@ import { ShoppingListService } from '../shopping-list.service';
   styleUrls: ['./shopping-list-edit.component.css']
 })
 export class ShoppingListEditComponent implements OnInit, OnDestroy {
-	// @ViewChild('nameInput') nameInputRef: ElementRef;
-	// @ViewChild('amountInput') amountInputRef: ElementRef;
   @ViewChild('f') slForm: NgForm;
   subscription: Subscription;
   editMode = false;
@@ -43,8 +40,6 @@ export class ShoppingListEditComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(form: NgForm){
-  	// const ingName = this.nameInputRef.nativeElement.value;
-  	// const ingAmount = this.amountInputRef.nativeElement.value;
     const value = form.value;
   	const newIngredient = new Ingredient(value.name, value.amount);
     if(this.editMode){

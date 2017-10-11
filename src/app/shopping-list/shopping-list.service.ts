@@ -1,4 +1,3 @@
-// import { EventEmitter } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 
 import { Ingredient } from '../shared/ingredient.model';
@@ -14,7 +13,7 @@ export class ShoppingListService{
 	];
 
 	getIngredients(){
-		return this.ingredients.slice(); //копия ингр, а не ориг массив
+		return this.ingredients.slice();
 	}
 
 	getIngredient(index: number){
@@ -27,10 +26,7 @@ export class ShoppingListService{
 	}
 
 	addIngredients(ingredients: Ingredient[]){
-		// for(let ingredient of ingredients){
-		// 	this.addIngredient(ingredient);
-		// } метод подходит, но слишком много событий вызывается
-		this.ingredients.push(...ingredients); //оператор(ES6) ... -> разбивает массив на отдельные элементы
+		this.ingredients.push(...ingredients);
 		this.ingredientsChanged.next(this.ingredients.slice());
 	}
 

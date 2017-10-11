@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-// EventEmitter, 
 import { Subject } from 'rxjs/Subject';
 
 import { Recipe } from './recipe.model';
@@ -8,7 +7,6 @@ import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
 @Injectable()
 export class RecipeService{
-	// recipeSelected = new EventEmitter<Recipe>();
 	recipesChanged = new Subject<Recipe[]>()
 	
 	private recipes: Recipe[] = [
@@ -37,7 +35,7 @@ export class RecipeService{
 				new Ingredient('Cheese', 1)
 			]
 			)
-  ]; //private - не даст доступ к этому массиву извне
+  ];
 
   constructor(private slService: ShoppingListService){}
 
@@ -47,7 +45,7 @@ export class RecipeService{
   }
 
   getRecipes(){
-  	return this.recipes.slice(); //вернет копию recipes таким оразом доступа не будет к основному массиву, только к копии
+  	return this.recipes.slice();
   }
 
   getRecipe(index: number){

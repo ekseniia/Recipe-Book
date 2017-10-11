@@ -3,8 +3,6 @@
 	[routerLink]="[index]"
 	routerLinkActive="active"
 	class="list-group-item clearfix">
-	<!-- (click)="onSelected()" -->
-	<!-- (click)="onItemClick( recipe.name, recipe.description, recipe.imagePath)" -->
 	<div class="pull-left">
 		<h4 class="list-group-item-heading"> {{recipe.name}} </h4>
 		<p class="list-group-item-text"> {{recipe.description}} </p>
@@ -16,7 +14,3 @@
 			style="max-height: 50px">
 	</span>
 </a>
-
-<!-- сделать событие на клик по одиночному элементу
-передать это событие в recipes.component
-и это передает в recipe-detail данные о кликнутом элементе и отображает детали -->

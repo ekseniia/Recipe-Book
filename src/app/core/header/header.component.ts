@@ -30,22 +30,4 @@
  	onLogout(){
  		this.authService.logout();
  	}
- 	
-
- 	// @Output() recipeClick = new EventEmitter<{activeP: string}>();
- 	// @Output() shopListlick = new EventEmitter<''>();
- 	// @Output() activePage: string = '';
-
- 	// onRecipesClick(btnVal: string){
- 	// 	console.log(btnVal);
- 	// 	this.activePage = btnVal;
- 	// 	this.recipeClick.emit({
- 	// 		activeP: this.activePage
- 	// 	});
- 	// };
- 	// onShopListClick(btnVal: string){
- 	// 	console.log(btnVal);
- 	// 	this.activePage = btnVal;
- 	// 	this.shopListlick.emit();
- 	// };
  }
